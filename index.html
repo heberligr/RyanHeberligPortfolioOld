@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name — Engineering Portfolio</title>
+  <meta name="description" content="Engineering portfolio and project archive.">
+
+  <!-- Shared stylesheet: all pages point to the same file -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<!--
+  data-page="home" is used by main.js to highlight the matching
+  nav link. Keep this in sync with the data-page attribute on the
+  corresponding <a> tag below.
+-->
+<body data-page="home">
+
+  <!-- =========================================================
+       NAV BAR
+       This exact block is copied at the top of every page.
+       If you add a new top-level page (not a project), add a
+       link here AND in every other page's nav for consistency.
+       ========================================================= -->
+  <header class="site-nav">
+    <div class="container">
+      <a href="index.html" class="brand">YOUR NAME / ENGINEERING</a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">MENU</button>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" data-page="home">Home</a></li>
+          <li><a href="index.html#work" data-page="work">Work</a></li>
+          <li><a href="about.html" data-page="about">About</a></li>
+          <li><a href="resume/resume.pdf" data-page="resume" target="_blank" rel="noopener">Résumé</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       HERO
+       EDIT ME: swap the headline, subtitle, and eyebrow text
+       for your own introduction.
+       ========================================================= -->
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">MECHANICAL / ELECTRICAL / SOFTWARE — pick what fits you</p>
+      <h1>Your Name. Engineer.</h1>
+      <p class="lede">
+        A one- or two-sentence summary of what you build and the kind of
+        problems you like solving. Replace this with your own line —
+        specific is better than impressive-sounding.
+      </p>
+      <div class="hero-actions">
+        <a href="#work" class="btn btn-primary">View projects</a>
+        <a href="about.html" class="btn btn-outline">About me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FEATURED WORK
+       Each .project-card below is one tile on the grid. To add
+       a new project:
+         1. Duplicate one <a class="project-card"> block.
+         2. Point its href at your new file in /projects/.
+         3. Update the title, tags, and one-line summary.
+         4. Swap the .img-placeholder div for a real <img> once
+            you have a thumbnail image.
+       Layout is a CSS grid (.grid-3) — it will re-flow to a
+       single column automatically on mobile.
+       ========================================================= -->
+  <section class="section" id="work">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Featured work</h2>
+        <span class="index-label">03 PROJECTS LISTED</span>
+      </div>
+
+      <div class="grid grid-3">
+
+        <!-- PROJECT CARD 1 -->
+        <a href="projects/project-01.html" class="project-card">
+          <div class="thumb">
+            <div class="img-placeholder">
+              [ Thumbnail placeholder ]<br>
+              project-01-thumb.jpg<br>
+              (recommended 800×600)
+            </div>
+          </div>
+          <div class="card-body">
+            <span class="card-tags">MECHANICAL / CAD / PROTOTYPING</span>
+            <h3>Project One Title</h3>
+            <p class="card-summary">One sentence describing what this project is and the problem it solved.</p>
+          </div>
+        </a>
+
+        <!-- PROJECT CARD 2 -->
+        <a href="projects/project-02.html" class="project-card">
+          <div class="thumb">
+            <div class="img-placeholder">
+              [ Thumbnail placeholder ]<br>
+              project-02-thumb.jpg<br>
+              (recommended 800×600)
+            </div>
+          </div>
+          <div class="card-body">
+            <span class="card-tags">SOFTWARE / EMBEDDED / C++</span>
+            <h3>Project Two Title</h3>
+            <p class="card-summary">One sentence describing what this project is and the problem it solved.</p>
+          </div>
+        </a>
+
+        <!-- PROJECT CARD 3 (currently points at the blank template —
+             replace with project-03.html once you've duplicated the
+             template file; see /projects/project-template.html) -->
+        <a href="projects/project-template.html" class="project-card">
+          <div class="thumb">
+            <div class="img-placeholder">
+              [ Thumbnail placeholder ]<br>
+              project-03-thumb.jpg<br>
+              (recommended 800×600)
+            </div>
+          </div>
+          <div class="card-body">
+            <span class="card-tags">ADD YOUR TAGS HERE</span>
+            <h3>Add Your Next Project</h3>
+            <p class="card-summary">This card links to the blank template — duplicate that file to start a new project page.</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       ABOUT TEASER
+       Short version of your about section, with a link through
+       to the full about.html page. Keep this brief on purpose.
+       ========================================================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>About</h2>
+        <span class="index-label">SUMMARY</span>
+      </div>
+      <p class="prose">
+        A two-to-three sentence bio: your discipline, what kind of
+        engineering you focus on, and what you're looking for next
+        (a role, collaborators, etc). This is a teaser — the full
+        story, skills list, and résumé link live on the About page.
+      </p>
+      <a href="about.html" class="text-link">Read the full about page →</a>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       TITLE-BLOCK FOOTER
+       Styled after the title block on an engineering drawing
+       sheet. Edit the contact details in the cells below.
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="title-block">
+        <div class="tb-cell">
+          <span class="tb-label">NAME</span>
+          Your Name
+        </div>
+        <div class="tb-cell">
+          <span class="tb-label">EMAIL</span>
+          <a href="mailto:you@example.com">you@example.com</a>
+        </div>
+        <div class="tb-cell">
+          <span class="tb-label">LINKS</span>
+          <a href="#">LinkedIn</a> &nbsp;/&nbsp; <a href="#">GitHub</a>
+        </div>
+        <div class="tb-cell">
+          <span class="tb-label">SHEET</span>
+          Portfolio v1 — Rev. 2026
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
