@@ -18,10 +18,11 @@
 <body data-page="home">
 
   <!-- =========================================================
-       NAV BAR
-       This exact block is copied at the top of every page.
-       If you add a new top-level page (not a project), add a
-       link here AND in every other page's nav for consistency.
+       NAV BAR ("hot bar")
+       This exact block is copied at the top of every page. Only
+       two destinations besides Home: Projects and Résumé. If you
+       add another top-level page later, add a link here AND in
+       every other page's nav so they all stay in sync.
        ========================================================= -->
   <header class="site-nav">
     <div class="container">
@@ -32,18 +33,19 @@
       <nav>
         <ul class="nav-links">
           <li><a href="index.html" data-page="home">Home</a></li>
-          <li><a href="index.html#work" data-page="work">Work</a></li>
-          <li><a href="about.html" data-page="about">About</a></li>
-          <li><a href="resume/resume.pdf" data-page="resume" target="_blank" rel="noopener">Résumé</a></li>
+          <li><a href="projects.html" data-page="projects">Projects</a></li>
+          <li><a href="resume.html" data-page="resume">Résumé</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <!-- =========================================================
-       HERO
-       EDIT ME: swap the headline, subtitle, and eyebrow text
-       for your own introduction.
+       INTRO + CONTACT INFO
+       This is the first thing visitors land on. EDIT ME: swap
+       the headline/tagline for your own, and fill in every field
+       in the contact strip. Leave a field blank (delete the <a>
+       or <span>) if you don't want to list it.
        ========================================================= -->
   <section class="hero">
     <div class="container">
@@ -54,29 +56,37 @@
         problems you like solving. Replace this with your own line —
         specific is better than impressive-sounding.
       </p>
-      <div class="hero-actions">
-        <a href="#work" class="btn btn-primary">View projects</a>
-        <a href="about.html" class="btn btn-outline">About me</a>
-      </div>
+
+      <!-- CONTACT STRIP: your info, right below the hot bar -->
+      <ul class="contact-strip">
+        <li><span class="contact-label">Email</span><a href="mailto:you@example.com">you@example.com</a></li>
+        <li><span class="contact-label">Phone</span><a href="tel:+15555555555">(555) 555-5555</a></li>
+        <li><span class="contact-label">Location</span><span>City, State</span></li>
+        <li><span class="contact-label">LinkedIn</span><a href="#" target="_blank" rel="noopener">linkedin.com/in/yourname</a></li>
+        <li><span class="contact-label">GitHub</span><a href="#" target="_blank" rel="noopener">github.com/yourname</a></li>
+      </ul>
     </div>
   </section>
 
   <!-- =========================================================
-       FEATURED WORK
-       Each .project-card below is one tile on the grid. To add
-       a new project:
+       FEATURED PROJECTS
+       Each .project-card is one tile. The whole card is a link —
+       clicking the image, title, or skills goes to the full
+       project page. To add a new project:
          1. Duplicate one <a class="project-card"> block.
          2. Point its href at your new file in /projects/.
-         3. Update the title, tags, and one-line summary.
+         3. Update the title, skills tags, and one-line summary.
          4. Swap the .img-placeholder div for a real <img> once
             you have a thumbnail image.
-       Layout is a CSS grid (.grid-3) — it will re-flow to a
-       single column automatically on mobile.
+         5. Add the same project to projects.html too (see that
+            file's comments) so both pages stay in sync.
+       Layout is a CSS grid (.grid-3) — it re-flows to a single
+       column automatically on mobile.
        ========================================================= -->
   <section class="section" id="work">
     <div class="container">
       <div class="section-heading">
-        <h2>Featured work</h2>
+        <h2>Projects</h2>
         <span class="index-label">03 PROJECTS LISTED</span>
       </div>
 
@@ -92,9 +102,12 @@
             </div>
           </div>
           <div class="card-body">
-            <span class="card-tags">MECHANICAL / CAD / PROTOTYPING</span>
             <h3>Project One Title</h3>
-            <p class="card-summary">One sentence describing what this project is and the problem it solved.</p>
+            <ul class="skills-tags">
+              <li>SolidWorks</li>
+              <li>CNC Machining</li>
+              <li>GD&amp;T</li>
+            </ul>
           </div>
         </a>
 
@@ -108,9 +121,12 @@
             </div>
           </div>
           <div class="card-body">
-            <span class="card-tags">SOFTWARE / EMBEDDED / C++</span>
             <h3>Project Two Title</h3>
-            <p class="card-summary">One sentence describing what this project is and the problem it solved.</p>
+            <ul class="skills-tags">
+              <li>C++</li>
+              <li>Embedded Systems</li>
+              <li>KiCad</li>
+            </ul>
           </div>
         </a>
 
@@ -126,34 +142,15 @@
             </div>
           </div>
           <div class="card-body">
-            <span class="card-tags">ADD YOUR TAGS HERE</span>
             <h3>Add Your Next Project</h3>
-            <p class="card-summary">This card links to the blank template — duplicate that file to start a new project page.</p>
+            <ul class="skills-tags">
+              <li>Add a skill</li>
+              <li>Add a skill</li>
+            </ul>
           </div>
         </a>
 
       </div>
-    </div>
-  </section>
-
-  <!-- =========================================================
-       ABOUT TEASER
-       Short version of your about section, with a link through
-       to the full about.html page. Keep this brief on purpose.
-       ========================================================= -->
-  <section class="section">
-    <div class="container">
-      <div class="section-heading">
-        <h2>About</h2>
-        <span class="index-label">SUMMARY</span>
-      </div>
-      <p class="prose">
-        A two-to-three sentence bio: your discipline, what kind of
-        engineering you focus on, and what you're looking for next
-        (a role, collaborators, etc). This is a teaser — the full
-        story, skills list, and résumé link live on the About page.
-      </p>
-      <a href="about.html" class="text-link">Read the full about page →</a>
     </div>
   </section>
 
